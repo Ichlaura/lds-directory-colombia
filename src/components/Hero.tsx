@@ -3,20 +3,16 @@ import SafeImage from "./SafeImage";
 import { DirectoryBadge, StakeChips } from "./HeroBadges";
 
 const fadeRight =
-  "linear-gradient(to right, black 40%, transparent 100%), linear-gradient(to bottom, black 70%, transparent 100%)";
+  "linear-gradient(to right, black 30%, transparent 100%), linear-gradient(to bottom, black 70%, transparent 100%)";
 const fadeLeft =
-  "linear-gradient(to left, black 40%, transparent 100%), linear-gradient(to bottom, black 70%, transparent 100%)";
+  "linear-gradient(to left, black 30%, transparent 100%), linear-gradient(to bottom, black 70%, transparent 100%)";
 
 export default function Hero() {
   return (
     <section className="relative isolate overflow-hidden px-4 pb-10 pt-24 sm:px-8 sm:pb-12 sm:pt-28">
-      {/* Resplandor base */}
-      <div
-        aria-hidden="true"
-        className="absolute inset-0 -z-30 bg-[#050505]"
-      />
+      <div aria-hidden="true" className="absolute inset-0 -z-30 bg-[#050505]" />
 
-      {/* Fondo: ciudad + templo (visible arriba, oscuro abajo) */}
+      {/* Fondo: ciudad + templo */}
       <div aria-hidden="true" className="absolute inset-0 -z-20">
         <SafeImage
           src="/images/hero/fondo-templo.jpg"
@@ -29,7 +25,7 @@ export default function Hero() {
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_45%_55%_at_50%_55%,rgba(0,0,0,0.75),transparent_75%)]" />
       </div>
 
-      {/* Personas izquierda */}
+      {/* Personas izquierda (más tenue, esquina superior oscurecida) */}
       <div
         aria-hidden="true"
         className="absolute inset-y-0 left-0 -z-[15] hidden w-[34%] md:block"
@@ -44,11 +40,12 @@ export default function Hero() {
           src="/images/hero/izquierda.jpg"
           alt=""
           sizes="34vw"
-          className="object-[left_center]"
+          className="object-[left_center] opacity-80"
         />
+        <div className="absolute inset-x-0 top-0 h-[55%] bg-gradient-to-b from-black via-black/70 to-transparent" />
       </div>
 
-      {/* Personas derecha */}
+      {/* Personas derecha (más tenue) */}
       <div
         aria-hidden="true"
         className="absolute inset-y-0 right-0 -z-[15] hidden w-[34%] md:block"
@@ -63,11 +60,18 @@ export default function Hero() {
           src="/images/hero/derecha.jpg"
           alt=""
           sizes="34vw"
-          className="object-[right_center]"
+          className="object-[right_center] opacity-80"
         />
+        <div className="absolute inset-x-0 top-0 h-[30%] bg-gradient-to-b from-black/70 to-transparent" />
       </div>
 
-      {/* Ondas de luz (encima de las fotos) */}
+      {/* Oscurecimiento detrás del título para que se lea */}
+      <div
+        aria-hidden="true"
+        className="absolute inset-0 -z-[12] bg-[radial-gradient(ellipse_42%_50%_at_50%_45%,rgba(0,0,0,0.7),transparent_100%)]"
+      />
+
+      {/* Ondas de luz */}
       <svg
         aria-hidden="true"
         viewBox="0 0 1440 520"
@@ -120,18 +124,20 @@ export default function Hero() {
       </svg>
 
       <div className="relative mx-auto max-w-4xl text-center">
-       <DirectoryBadge />
-        <h1 className="font-serif font-medium uppercase leading-[0.95] tracking-tight drop-shadow-[0_2px_24px_rgba(0,0,0,0.9)]">
+        <DirectoryBadge />
+
+        <h1 className="font-serif font-medium uppercase leading-[0.95] tracking-tight drop-shadow-[0_2px_24px_rgba(0,0,0,0.95)]">
           <span className="block text-[clamp(2.2rem,6vw,4.4rem)] text-white">
             Nuestra gente.
           </span>
-          <span className="block bg-gradient-to-r from-[#f7d27a] via-[#f5c04a] to-[#c8912a] bg-clip-text text-[clamp(2.2rem,6vw,4.4rem)] italic text-transparent">
+          <span className="block bg-gradient-to-r from-[#f7d27a] via-[#f5c04a] to-[#c8912a] bg-clip-text text-[clamp(2.2rem,6vw,4.4rem)] italic text-transparent drop-shadow-[0_2px_16px_rgba(0,0,0,0.9)]">
             Nuestros negocios.
           </span>
         </h1>
 
         <p className="mx-auto mt-4 max-w-lg text-base text-white drop-shadow-[0_1px_12px_rgba(0,0,0,1)] sm:text-lg">
-          Directorio de emprendimientos de miembros de la iglesia de Jesucristo en Bogotá, Colombia.
+          Directorio de emprendimientos de miembros de la iglesia de Jesucristo
+          en Bogotá, Colombia.
         </p>
 
         <div
@@ -163,8 +169,7 @@ export default function Hero() {
           </button>
         </div>
 
-       <StakeChips />
-
+        <StakeChips />
       </div>
     </section>
   );
