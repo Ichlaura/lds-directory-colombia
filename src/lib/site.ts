@@ -3,5 +3,5 @@ export const creator = {
   role: "Software Developer",
   // Pon aquí el link de tu perfil: LinkedIn, GitHub o tu portafolio.
   // Ejemplo: "https://www.linkedin.com/in/tu-usuario"
-  profileUrl: "",
+  profileUrl: "https://ichlaura.github.io/lauranunez-portfolio/",
 };
