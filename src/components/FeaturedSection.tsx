@@ -20,7 +20,7 @@ export default function FeaturedSection() {
           </Link>
         </div>
 
-        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6">
+        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 xl:grid-cols-4">
           {featuredBusinesses.map((b) => (
             <BusinessCard key={b.slug} business={b} />
           ))}

@@ -8,14 +8,14 @@ export type Business = {
   slug: string;
   name: string;
   category: string;
-  rating: number;
-  ratingCount: number;
+  rating?: number;
+  ratingCount?: number;
   city: string;
   description: string;
   image: string;
-  whatsapp: string;
-  instagram: string;
-  website: string;
+  whatsapp?: string;
+  instagram?: string;
+  website?: string;
 };
 
 export const categories: Category[] = [
@@ -31,81 +31,40 @@ export const categories: Category[] = [
 
 export const featuredBusinesses: Business[] = [
   {
-    slug: "dulce-maria",
-    name: "Dulce María",
-    category: "Repostería artesanal",
-    rating: 4.9,
-    ratingCount: 127,
+    slug: "massai-joyeria",
+    name: "Massai Joyería",
+    category: "Joyería",
     city: "Bogotá",
-    description: "Tortas y postres personalizados para tus momentos especiales.",
-    image: "/images/businesses/dulce-maria.jpg",
-    whatsapp: "573000000001",
-    instagram: "dulcemaria",
-    website: "https://example.com",
+    description: "Fabricantes directos. Envío gratis a todo el país.",
+    image: "/images/businesses/massai-joyeria.jpg",
+    whatsapp: "573213734811",
+    instagram: "massaijoyeria",
   },
   {
     slug: "adelina-invitations",
     name: "Adelina Invitations",
     category: "Invitaciones digitales",
-    rating: 4.8,
-    ratingCount: 96,
     city: "Colombia / Online",
-    description: "Diseños únicos y personalizados para tus eventos.",
+    description: "Invitaciones digitales elegantes, completas y sin complicaciones.",
     image: "/images/businesses/adelina-invitations.jpg",
-    whatsapp: "573000000002",
-    instagram: "adelinainvitations",
-    website: "https://example.com",
+    instagram: "adelina_invitations",
+    website: "https://adeline-website-six.vercel.app",
   },
   {
-    slug: "cafe-de-la-montana",
-    name: "Café de la Montaña",
-    category: "Café y comida saludable",
-    rating: 5.0,
-    ratingCount: 83,
+    slug: "nuestras-raices-ancestrales",
+    name: "Nuestras Raíces Ancestrales",
+    category: "Conservas artesanales",
     city: "Bogotá",
-    description: "Café especial y opciones saludables para cada día.",
-    image: "/images/businesses/cafe-de-la-montana.jpg",
-    whatsapp: "573000000003",
-    instagram: "cafedelamontana",
-    website: "https://example.com",
+    description: "Tradición, calidad y naturaleza. 100% natural, sin aditivos ni conservantes.",
+    image: "/images/businesses/nuestras-raices-ancestrales.jpg",
   },
   {
-    slug: "luz-y-vida",
-    name: "Luz y Vida",
-    category: "Fotografía",
-    rating: 4.9,
-    ratingCount: 61,
+    slug: "mr-shelos",
+    name: "Mr Shelos",
+    category: "Bordado, pintura y manillas",
     city: "Bogotá",
-    description: "Sesiones familiares, eventos y momentos especiales.",
-    image: "/images/businesses/luz-y-vida.jpg",
-    whatsapp: "573000000004",
-    instagram: "luzyvida",
-    website: "https://example.com",
-  },
-  {
-    slug: "code-and-purpose",
-    name: "Code & Purpose",
-    category: "Desarrollo web",
-    rating: 4.8,
-    ratingCount: 54,
-    city: "Bogotá / Online",
-    description: "Páginas web y soluciones digitales para emprendedores.",
-    image: "/images/businesses/code-and-purpose.jpg",
-    whatsapp: "573000000005",
-    instagram: "codeandpurpose",
-    website: "https://example.com",
-  },
-  {
-    slug: "flor-de-sion",
-    name: "Flor de Sión",
-    category: "Decoración y eventos",
-    rating: 4.9,
-    ratingCount: 72,
-    city: "Bogotá",
-    description: "Decoración floral para eventos que inspiran.",
-    image: "/images/businesses/flor-de-sion.jpg",
-    whatsapp: "573000000006",
-    instagram: "flordesion",
-    website: "https://example.com",
+    description: "Manillas de mostacilla hechas a mano. Color, tradición y estilo en cada detalle.",
+    image: "/images/businesses/mr-shelos.jpg",
+    whatsapp: "573124470341",
   },
 ];
